@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression]">
+  <test thread-count="5" name="android(failed)">
+    <parameter name="IOSorAndroid" value="Android"/>
+    <parameter name="platformVersion" value="9.0"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="deviceName" value="Pixel_3"/>
+    <parameter name="systemPort" value="8210"/>
+    <classes>
+      <class name="runner.RunTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- runner.RunTest -->
+    </classes>
+  </test> <!-- android(failed) -->
+</suite> <!-- Failed suite [Regression] -->
